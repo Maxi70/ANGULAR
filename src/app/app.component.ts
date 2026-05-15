@@ -28,4 +28,5 @@ import { ChildComponent } from "./components/child.component/child.component";
       { id: 4, name: 'Pez', type: 'Pez' }
     ];  
     @Input() msg: string = '';
+    Text: string = 'variable desde el padre';
  }
