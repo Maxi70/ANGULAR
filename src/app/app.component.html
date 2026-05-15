@@ -65,7 +65,32 @@
       <h1>number: {{number}}</h1>
       <input type="text" [(ngModel)]="userName" (input)="addOne()">
       <h1 (click)="addOne()">Number: {{number}}</h1> 
-      <h1></h1>
+      <h1>Bloque &#64;if renderizado dinamico</h1>
+      @if (condition){
+        <h2>La condicion se cumple</h2>
+      } 
+      @else if (condition2){
+        <h2>la condicion 2 se cumple</h2>
+      }
+      @else {
+        <h2>Las condiciones no se cumplen</h2>
+      }
+      <h1>Bloque &#64;for - renderizado de listas</h1>
+      @for (movie of movies; track movie) {
+        <p>{{$index + 1}} - {{ movie }}</p>
+      }
+      <ul>
+      @for (animal of animals; track animal) {
+        <li>
+          <h2>{{$index + 1}} - {{ animal.name }}</h2>
+          <img [src]="animal.img" alt=""  width="">
+        </li> 
+      }
+      </ul>
+      <h1>&#64;input comunicacion padre hijo </h1>
+      <h2>este es el componente hijo</h2>
+      <app-child msg="info que viene desde el componente padre"></app-child>
+      <p>{{ msg }}</p>
       <p>Congratulations! Your app is running. 🎉</p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
