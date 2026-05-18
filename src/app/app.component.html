@@ -89,8 +89,9 @@
       </ul>
       <h1>&#64;input comunicacion padre hijo </h1>
       <h2>este es el componente hijo</h2>
-      <app-child [msg]="Text"></app-child>
+      <app-child [msg]="Text" [person]="person"></app-child>
       <p>{{ msg }}</p>
+      <div>{{person.sex}} - {{person.age}}</div>
       <p>Congratulations! Your app is running. 🎉</p>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>

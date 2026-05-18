@@ -29,4 +29,10 @@ import { ChildComponent } from "./components/child.component/child.component";
     ];  
     @Input() msg: string = '';
     Text: string = 'variable desde el padre';
+    person: any = {
+      name: 'Adrian',
+      sex: 'Male',
+      age: 30,
+      city: 'Madrid'
+    };
  }
